@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: tpdb-backend-monolith
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+  flyway:
+    enabled: false
+    baseline-on-migrate: true
+    validate-on-migrate: true
+    #    please only use db/dummy for testing purposes
+    locations:
+      classpath:db/migration,classpath:db/seed,classpath:db/dummy
